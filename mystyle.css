@@ -93,7 +93,7 @@ body {
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width:400px) {
-  .row, .navbar {   
+  .row, .navbar, .navbar a {   
     flex-direction: row;
   }
 }
@@ -222,6 +222,7 @@ input[type=submit]:hover {
       top: 20px;
       right: 20px;
       z-index: 2;
+		align-content: center;
     }
     .navbar a {
       margin-center: 100px;
@@ -271,12 +272,12 @@ input[type=submit]:hover {
 	  src: url(href="https://johnremerpadron.github.io/BlogPage/");
     }
     @media (max-width: 400px) {
-     .sections, .section, .farright, .main, .center, .navbar{
+     .sections, .section, .farright, .main, .center, .navbar, .navbar a {
         flex-direction: row;
         align-items: center;
       }
 		@media screen and (max-width: 400px) {
-   .navbar, .main, .center, .navbar {   
+   .navbar, .main, .center, .navbar, .navbar a {   
   align-items: center;
 	   text-align: center;
 	   
@@ -299,6 +300,7 @@ input[type=submit]:hover {
       .navbar {
         position: absolute;
         margin-top: 10px;
+		  align-content: center;
       }
     }
 /* Footer */
