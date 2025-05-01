@@ -271,12 +271,12 @@ input[type=submit]:hover {
 	  src: url(href="https://johnremerpadron.github.io/BlogPage/");
     }
     @media (max-width: 700px) {
-     .sections, .section, .farright, .main {
+     .sections, .section, .farright, .main, .center {
         flex-direction: row;
         align-items: center;
       }
 		@media screen and (max-width: 700px) {
-   .navbar, .main {   
+   .navbar, .main, .center {   
   align-items: center;
 	   text-align: center;
 	   
@@ -284,7 +284,7 @@ input[type=submit]:hover {
 }
 		/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-	.gallery, .gallery-items, .item, .farright, .sections, .section, .main { 
+	.gallery, .gallery-items, .item, .farright, .sections, .section, .main, .center { 
     flex-direction: row;
 		align-items: center;
 		  top: 20px;
@@ -462,3 +462,12 @@ input[type=submit]:hover {
     opacity: 0.7;
 }
 
+
+  .center {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 40px 30px;
+      background: #222;
+      color: white;
+    }
