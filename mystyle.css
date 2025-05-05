@@ -32,6 +32,8 @@ body {
 /* Style the top navigation bar */
 .navbar {
   display: flex;
+	flex: auto;
+	position: absolute;
  
 	text-align: center;
 	align-items: center;
@@ -92,8 +94,8 @@ body {
 }
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width : 400px ){
-  .row, .navbar, .navbar a {   
+@media screen and ( max-width : 350px ){
+  .row, .navbar,.navbar, .navbar a {   
     flex-direction: row;
   }
 }
@@ -221,8 +223,10 @@ input[type=submit]:hover {
       position: absolute;
       top: 20px;
       right: 20px;
-      z-index: 2;
+      z-index: 1;
 		align-content: center;
+		display: flex;
+		flex: wrap;
     }
     .navbar a {
       margin-center: 100px;
@@ -230,6 +234,7 @@ input[type=submit]:hover {
       color: white;
       font-weight: bold;
 		align-content: center;
+		display: flex;
     }
     .tagline {
       text-align: center;
@@ -271,12 +276,12 @@ input[type=submit]:hover {
       cursor: pointer;
 	  src: url(href="https://johnremerpadron.github.io/BlogPage/");
     }
-    @media (max-width : 400px ){
+    @media ( max-width : 350px ){
      .sections, .section, .farright, .main, .center, .navbar, .navbar a {
         flex-direction: row;
         align-items: center;
       }
-		@media screen and (max-width: 400px) {
+		@media screen and (max-width: 350px) {
    .navbar, .main, .center, .navbar, .navbar a {   
   align-items: center;
 	   text-align: center;
