@@ -98,11 +98,20 @@ body {
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and ( max-width : 350px ){
-  .row, .navbar,.navbar, .navbar a {   
-    flex-direction: row;
+  .row, .navbar,.navbar, .navbar a, .gallery-items, .item, .gallery, .container {   
+    flex-direction: column;
+	  
   }
 }
 
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and ( max-width : 350px ){
+  .gallery-items, .item, .gallery, .container {   
+    flex-direction: column;
+	  display: flex;
+	  
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -280,7 +289,7 @@ input[type=submit]:hover {
 	  src: url(href="https://johnremerpadron.github.io/BlogPage/");
     }
     @media ( max-width : 350px ){
-     .sections, .section, .farright, .main, .center, .navbar, .navbar a {
+     .sections, .section, .farright, .main, .center, .navbar, .navbar a, .gallery, .container, .gallery-items {
         flex-direction: row;
         align-items: center;
       }
@@ -361,6 +370,7 @@ input[type=submit]:hover {
 	width: 100%;
 	float: left;
 	padding:30px 15px;
+	display: flex;
 }
 .gallery .title h1{
 	font-size:36px;
@@ -372,13 +382,14 @@ input[type=submit]:hover {
 .gallery .gallery-items .item{
 	float: left;
 	width:25%;
-	
+	box-sizing: border-box;
+	display: flex;
 }
 .gallery .gallery-items .item.hide{
 	display: none;
 }
 .gallery .gallery-items .item.show{
-	display: block;
+	display: inline-block;
 	display: flex;
 	animation: show .5s ease;
 }
@@ -396,7 +407,7 @@ input[type=submit]:hover {
 
 .gallery .gallery-items .item img{
 	width: 100%;
-	display: block;
+	display: table-column;
 }
 .gallery .gallery-items .item .caption{
 	position: absolute;
